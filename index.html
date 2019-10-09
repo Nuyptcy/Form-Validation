@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
-    <title>Time to reflect</title>
+    <title>Learning jQuery</title>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 連接jQuery -->
+    <script type="text/javascript" src="jquery.min.js"></script>
+    
     <style>
+        #circle {
+            width: 200px;
+            height: 200px;
+            background-color: #a7568b;
+            border-radius: 50%;
+        }
+        .square {
+            width: 200px;
+            height: 200px;
+            background-color: #e86d5e;
+            margin-top: 10px;
+           
+        }
 
-    /* p:nth-child(odd){
-        background-color: red;
-        color:white;
-    } */
-
-    p:nth-of-type(odd){
-        background-color: red;
-        color:white;
-    }
     
     </style>
 
@@ -26,18 +33,29 @@
 </head>
 
 <body>
+    <div id="circle"></div>
+    <p>文字</p>
+    <div class="square"></div>
+    <div class="square"></div>
+    <script type="text/javascript">
+    $("#circle").hover(function(){
+        alert($("p").html());
+    });
 
-    <p>第一行第一行第一行第一行第一行第一行第一行</p>
-    <hr>
-    <p>第二行第二行第二行第二行第二行第二行第二行</p>
-    <hr>
-    <p>第三行第三行第三行第三行第三行第三行第三行</p>
-    <hr>
-    <p>第四行第四行第四行第四行第四行第四行第四行</p>
-    <hr>
-    <p>第五行第五行第五行第五行第五行第五行第五行</p>
-    <hr>
-    <p>第六行第六行第六行第六行第六行第六行第六行</p>
+    $(".square").click(function(){
+        alert("我們點擊了正方形");
+
+    });
+    // if(typeof jQuery != "undefined")
+    if(jQuery){
+        alert("jQuery已安裝");
+
+    }else{
+        alert("還沒安裝");
+    }
+
+
+    
     
     
     
