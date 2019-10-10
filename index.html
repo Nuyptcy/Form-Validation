@@ -34,6 +34,8 @@
 
 <body>
     <div id="circle"></div>
+    <button id="b1">消退</button>
+    <button id="b2">顯示</button>
     <!-- <p>文字</p> -->
     <!-- <iframe width="800" height="600" src="https://www.youtube.com/embed/9vrLlTyG5k0"></iframe> -->
     <div class="square"></div>
@@ -54,6 +56,13 @@
       //fadeOut方法
     });
 
+    $("#b1").click(function(){
+        $("#circle").fadeOut(3000);
+    });
+
+    $("#b2").click(function(){
+        $("#circle").fadeIn(3000);
+    });
 
     // $(".square").click(function(){
     //     alert("我們點擊了正方形");
