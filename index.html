@@ -57,11 +57,17 @@
     });
 
     $("#b1").click(function(){
-        $("#circle").fadeOut(3000);
+        $("#circle").fadeOut(3000, function(){
+            alert("消退動畫已完成");
+        });
     });
 
     $("#b2").click(function(){
         $("#circle").fadeIn(3000);
+    });
+
+    $("#circle").click(function(){
+        $(this).animate({width:"400px",height:"500px"},3000);
     });
 
     // $(".square").click(function(){
