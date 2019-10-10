@@ -34,25 +34,38 @@
 
 <body>
     <div id="circle"></div>
-    <p>文字</p>
+    <!-- <p>文字</p> -->
+    <!-- <iframe width="800" height="600" src="https://www.youtube.com/embed/9vrLlTyG5k0"></iframe> -->
     <div class="square"></div>
     <div class="square"></div>
     <script type="text/javascript">
-    $("#circle").hover(function(){
-        alert($("p").html());
+    // $("#circle").click(function(){
+    //     alert($("p").html());
+    // });
+    // $("#circle").click(function(){
+    //     //src的屬性
+    //     alert($("iframe").attr("src"));
+    // });
+    $("#circle").click(function(){
+        //this指的是點擊的對象
+      $(".square").css("display","none");
+      //直接用hide方法
+      $(".square").hide();
+      //fadeOut方法
     });
 
-    $(".square").click(function(){
-        alert("我們點擊了正方形");
 
-    });
+    // $(".square").click(function(){
+    //     alert("我們點擊了正方形");
+
+    // });
     // if(typeof jQuery != "undefined")
-    if(jQuery){
-        alert("jQuery已安裝");
+    // if(jQuery){
+    //     alert("jQuery已安裝");
 
-    }else{
-        alert("還沒安裝");
-    }
+    // }else{
+    //     alert("還沒安裝");
+    // }
 
 
     
