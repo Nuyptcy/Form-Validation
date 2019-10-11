@@ -5,8 +5,8 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- 連接jQuery -->
-    <script type="text/javascript" src="jquery.min.js"></script>
+    <!-- add CDN 透過連結接上jQuery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     
     <style>
         
@@ -21,7 +21,11 @@
 </head>
 
 <body>
-    <script></script>
+    <script type="text/javascript">
+    $.get("test.html",function(data){
+        alert(data);
+    });
+    </script>
 
 </body>
 </html>
