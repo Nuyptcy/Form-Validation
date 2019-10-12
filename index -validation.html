@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
-    <title>Learning jQuery</title>
+    <title>驗證表單</title>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -21,19 +21,13 @@
 </head>
 
 <body>
-    <script type="text/javascript">
-
-    var string = "Hello allie";
-    //Regular Expression
-    //add i make regex can be recognized whether upper case or lower case
-    var regex = /Allie/i;
-    var result = string.match(regex);
-
-    alert(result);
-    
-    
-    
-    </script>
+    <div id="container">
+        <form id="validationForm"> 
+            <label for="email-name">姓名</label>
+            <input id="email-name" type="text" name="name" placeholder="請輸入您的姓名">
+            <label id="email-address">E-mail</label>
+        </form>
+    </div>
 
 </body>
 </html>
