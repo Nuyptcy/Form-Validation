@@ -21,10 +21,26 @@
 </head>
 
 <body>
+    <button>提交</button>
+    <p id="result"></p>
     <script type="text/javascript">
-    $.get("test.html",function(data){
-        alert(data);
+    // $.get("test.text", function(data){
+    //     alert(data);
+
+    // });
+    $.ajax({
+        url:"text.html"
+    }).done(function(data){
+        // alert(data)
     });
+
+    $(document).ready(function(){
+        $("button").click(function(){
+            $.get("test.html", function(data,status){
+                alert(data);
+        });
+    });
+    
     </script>
 
 </body>
