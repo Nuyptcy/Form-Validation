@@ -15,7 +15,7 @@
         }
 
         #container {
-            padding-top: 80px;
+            padding-top: 60px;
             width: 600px;
             /* 居中 */
             margin: auto;
@@ -30,6 +30,43 @@
             padding-left: 20px;
             margin-bottom: 10px;
         }
+
+        label{
+            width: 200px;
+            float: left;
+            font-size: 1.2em;
+            padding-top: 8px;
+
+        }
+
+        .input-width{
+            width: 300px;
+            height: 40px;
+        }
+
+        #mail-gender{
+            width: 323px;
+            height: 40px;
+
+        }
+
+        mail-message{
+            width:500px;
+            padding-top: 15px;
+        }
+
+        #submitButton{
+            background-color: #AA47BC;
+            color: white;
+            width: 500px;
+            height: 40px;
+        }
+
+        #error{
+            color: red;
+        }
+
+
         
 
     
@@ -47,10 +84,10 @@
             <!-- 不須action不需文件處理 不需定義發送方式 -->
             <label for="email-name">姓名</label>
             <!-- name對應的變量名稱 提醒用戶輸入內容 value >> placeholder -->
-            <input class="input-style" id="email-name" type="text" name="name" placeholder="請輸入您的姓名">
+            <input class="input-style input-width" id="email-name" type="text" name="name" placeholder="請輸入您的姓名">
 
             <label id="email-address">E-mail</label>
-            <input class="input-style" id="email-address" type="text" name="email" placeholder="請輸入電子郵件">
+            <input class="input-style input-width" id="email-address" type="text" name="email" placeholder="請輸入電子郵件">
 
             <label for="mail-gender">性別</label>
             <select class="input-style" id="mail-gender" class="" name="gender">
@@ -58,12 +95,12 @@
                 <option value="female">女性</option>
 
                 <label for="pass">密碼</label>
-                <input class="input-style" id="pass" type="password" name="" placeholder="密碼">
+                <input class="input-style input-width" id="pass" type="password" name="" placeholder="密碼">
 
                 <label for="pass2">確認密碼</label>
-                <input class="input-style" id="pass2" type="password" name="pass2" placeholder="確認密碼">
+                <input class="input-style input-width" id="pass2" type="password" name="pass2" placeholder="確認密碼">
 
-                <textarea class="input-style" id="mail-message" name="message" rows="8" cols="8" cols="80" placeholder="請描述您的狀況"></textarea>
+                <textarea class="input-style" id="mail-message" name="message" rows="8" cols="80" cols="80" placeholder="請描述您的狀況"></textarea>
                 <!-- submit 發送信息到服務器 -->
                 <button class="input-style" id="submitButton" type="submit" name="submit">發送郵件</button>
                 <div id="error"></div>
