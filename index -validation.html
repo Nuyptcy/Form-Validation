@@ -115,6 +115,17 @@
     <script type="text/javascript">
         $("#validationForm").submit(function(event){
             event.preventDefult();
+            var name = $("#email-name").val();
+            var email = $("#email-address").val();
+            var pass1 = $("#pass1").val();
+            var pass2 = $("#pass2").val();
+            var message = $("email-message").val();
+
+            if(name=="" || email=="" || pass1=="" || pass2=="" || message==""){
+                alert("請輸入完整信息")
+
+
+            }
     })</script>
 
 </body>
