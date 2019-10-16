@@ -114,6 +114,7 @@
 
     <script type="text/javascript">
         $("#validationForm").submit(function(event){
+            var errorMessage ="";
             event.preventDefult();
             var name = $("#email-name").val();
             var email = $("#email-address").val();
@@ -121,9 +122,24 @@
             var pass2 = $("#pass2").val();
             var message = $("email-message").val();
 
-            if(name=="" || email=="" || pass1=="" || pass2=="" || message==""){
-                alert("請輸入完整信息")
+            function isValidEmailAddress(emailAddress){
+                var pattern = /^\b[A-Z0-9]+@[A-Z0-9]+\.com\b/i;
+                return pattern.test(emailAddress);
+            }
 
+            if(name=="" || email=="" || pass1=="" || pass2=="" || message==""){
+                errorMessage ="請輸入完整信息";
+
+
+            }
+
+            else if(!isValidEmailAddress(email)){
+                errorMessage("請輸入正確格式E-mail");
+;
+            }
+
+            else if(pass1 !== pass2){
+                errorMessage("密碼不一致");
 
             }
     })</script>
