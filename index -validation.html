@@ -114,39 +114,41 @@
 
     <script type="text/javascript">
         $("#validationForm").submit(function(event){
-            var errorMessage ="";
-            event.preventDefult();
+            // var errorMessage ="";
+            // event.preventDefult();
             var name = $("#email-name").val();
             var email = $("#email-address").val();
             var pass1 = $("#pass1").val();
             var pass2 = $("#pass2").val();
             var message = $("email-message").val();
 
-            function isValidEmailAddress(emailAddress){
-                var pattern = /^\b[A-Z0-9]+@[A-Z0-9]+\.com\b/i;
-                return pattern.test(emailAddress);
-            }
+            // function isValidEmailAddress(emailAddress){
+            //     var pattern = /^\b[A-Z0-9]+@[A-Z0-9]+\.com\b/i;
+            //     return pattern.test(emailAddress);
+            // }
 
             if(name=="" || email=="" || pass1=="" || pass2=="" || message==""){
-                errorMessage ="請輸入完整信息";
-
-
+                alert("請輸入完整信息");
             }
 
-            else if(!isValidEmailAddress(email)){
-                errorMessage("請輸入正確格式E-mail");
-;
-            }
+            // else if(!isValidEmailAddress(email)){
+            //     errorMessage = "請輸入正確格式E-mail";
 
-            else if(pass1 !== pass2){
-                errorMessage("密碼不一致");
+            // }
 
-            }
+            // else if(pass1 != pass2){
+            //     errorMessage = "密碼不一致";
 
-            if(errorMessage ==""){
-                $("#error").html("郵件已發送!");
-            }
-    })</script>
+            // }
+
+            // if(errorMessage ==""){
+            //     $("#error").html("郵件已發送!");
+            //     $("#error").css("color","green");
+            // }else{
+            //     $("#error").html("errorMessage");
+            //     $("#error").css("color","red");}
+    });
+    </script>
 
 </body>
 </html>
